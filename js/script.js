@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $(".phone").mask("+380 (99)-999-9999");
-
     jQuery('.send-form').click(function() {
         var form = jQuery(this).closest('form');
 
@@ -16,7 +15,7 @@ $(document).ready(function() {
                 success: function(data) {
                     form.html(data);
                     form.css('opacity', '1');
-                    //form.find('.status').html('форма отправлена успешно');
+                    form.find('.status').html('форма отправлена успешно');
                     //$('#myModal').modal('show') // для бутстрапа
                 },
                 error: function() {
@@ -25,8 +24,6 @@ $(document).ready(function() {
             });
         }
     });
-
-
     $('#main-table-1').ready(function() {
         let btn1 = ["#btn-1-1", "#btn-1-2", "#btn-1-3", "#btn-1-4", "#btn-1-5", "#btn-1-6", "#btn-1-7", "#btn-1-8"];
         let table1 = ['#table-1-1', '#table-1-2', '#table-1-3', '#table-1-4', '#table-1-5', '#table-1-6', '#table-1-7', '#table-1-8']
@@ -241,14 +238,19 @@ $(document).ready(function() {
             $('#table-4-3').addClass('visible')
         });
     });
-
-    $('.single-item').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1
-    });
     $('.single-item').slick({
         slidesToShow: 3,
         centerMode: true,
         centerPadding: '50px',
     });
+    $('.order').click(function() {
+        $("#form").removeClass("hided")
+        $("#hover").removeClass("hided1")
+    });
+    $("#hover").click(function() {
+        $("#form").addClass("hided")
+        $("#hover").addClass("hided1")
+    });
+
+
 })

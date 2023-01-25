@@ -648,8 +648,11 @@ footer li {
     z-index: 999999;
     margin-left: 50%;
     margin-right: 50%;
-    left: -160px;
+    left: -13rem;
     margin-top: 4.5%;
+    opacity: 1;
+    transition: all 0.3s linear;
+    visibility: inherit;
     opacity: 1;
 }
 
@@ -717,9 +720,28 @@ form p {
 }
 
 .hover {
-    position: static;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #0000006c;
+    background-color: #000000a1;
     z-index: 999998;
+    border: none;
+    visibility: inherit;
+    opacity: 1;
+}
+
+label.error {
+    display: none !important;
+}
+
+.hided {
+    opacity: 0;
+    z-index: 0 !important;
+    visibility: hidden;
+}
+
+.hided1 {
+    opacity: 0;
+    z-index: -2;
+    visibility: hidden;
 }
